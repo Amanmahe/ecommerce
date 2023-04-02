@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-+l*=b!8w9vu85g5^*3l57qa4qr6hp3husooa24mj$-$nf+81xh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app','.now.sh']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -77,12 +77,7 @@ WSGI_APPLICATION = 'mac.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+
 
 
 # Password validation
@@ -134,5 +129,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 import os
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','static')
